@@ -184,8 +184,8 @@ padding-left: 40px;
 }
 
 /*mobile or base */
-.wrapper {
-    width: 96%;
+.wrappersection {
+    
     min-height: 200px;
     position: relative;
     margin: 0 auto;
@@ -195,31 +195,20 @@ padding-left: 40px;
   
   
   /*tablet */
-  @media screen and (min-width: 713px) {
+  @media screen and (min-width: 500px) {
     .wrappersection {
-    width: 600px;
+    
       background: pink;
-      display: flex;
-      flex-wrap: wrap;
     }
   }
   
   /* desktoppy */
-  @media screen and (min-width: 980px) {
-    .wrapperheader {
-    max-width: 100%;
+  @media screen and (min-width: 700px) {
+    .wrappersection {
+   
       background: blue;
   
     }
   
   }
-  @media screen and (min-width: 713px) {
-    .wrappersection {
-    max-width: 100%;
-      background: purple;
-      display: flex;
-      flex-wrap: wrap;
   
-    }
-  
-  }
