@@ -9,6 +9,46 @@
     border-width: 5px;
 }
 
+SHOP
+Code Snippets » CSS »
+The Clearfix: Force an Element To Self-Clear its Children
+BY CHRIS COYIER LAST UPDATED ON FEBRUARY 26, 2017
+CLEARFIX, PSUEDO ELEMENTS
+The Clearfix: Force an Element To Self-Clear its Children
+This will do you fine these days (IE 8 and up):
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+Apply it to any parent element in which you need to clear the floats. For example:
+
+<div class="group">
+  <div class="is-floated"></div>
+  <div class="is-floated"></div>
+  <div class="is-floated"></div>
+</div>
+You would use this instead of clearing the float with something like <br style="clear: both;" /> at the bottom of the parent (easy to forget, not handleable right in CSS, non-semantic) or using something like overflow: hidden; on the parent (you don't always want to hide overflow).
+
+Now for a bit of history!
+
+This was the original popular version, designed to support browsers as far back as it possibly could:
+
+.clearfix{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 .profile{
     background: white;
     color: white;
@@ -16,9 +56,10 @@
     height: 35px;
     font-size: 18px;
     position: absolute;
-    left: 910px;
+    left: 210px;
     padding: 20px;
     text-align: center;
+    margin-left: 1200px;
 }
 
 .header {
@@ -205,6 +246,35 @@ padding-left: 40px;
   /* desktoppy */
   @media screen and (min-width: 700px) {
     .wrappersection {
+   
+      background: blue;
+  
+    }
+  
+  }
+  
+/*mobile or base */
+.wrappersection1 {
+    
+    min-height: 200px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: black;
+  }
+  
+  
+  /*tablet */
+  @media screen and (min-width: 50px) {
+    .wrappersection1 {
+      padding: 40px;
+      background: pink;
+    }
+  }
+  
+  /* desktoppy */
+  @media screen and (min-width: 100%) {
+    .wrappersection1 {
    
       background: blue;
   
